@@ -11,7 +11,7 @@
     <title>INDEX | RECEIPE APP</title>
     <link rel="shortcut icon" href="favicon.ico" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" media="screen" href="assets/css/style.css" >
   
   </head>
@@ -21,10 +21,66 @@
   <div class="container index-page">
     <!--header section start-->
     <header>
+      <div class="wrapper">
+        <h1>
+          <a href="index.html" title="Logo">
+            <img src="https://via.placeholder.com/200x40" alt="Logo">
+          </a>
+        </h1>
+
+        <ul>
+          <li>
+            <a href="index.html" title="Home">home</a>
+          </li>
+        </ul>
+      </div>
     </header>
     <!--header section start-->
     <!--main section start-->
     <main>
+      <section class="search-receipe">
+        <div class="wrapper">
+          <form action="#FIXME">
+            <div class="form-group">
+              <input type="text" data-regex="receipeRegex" placeholder="ENTER THE RECEIPE NAME HERE">
+              <span>please do not add number while searching the receipe</span>
+              <ul class="dropdown">
+                <li>receipe name</li>
+                <li>receipe name</li>
+                <li>receipe name</li>
+              </ul>
+            </div> 
+            <div class="form-controls">
+              <button type="submit">search</button>
+            </div>
+          </form>
+
+          <div class="result">
+            <h2>receipe name</h2>
+            <div class="receipe">
+              <h3>steps for getting the receipe done</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis inventore reiciendis quae soluta hic aperiam esse non impedit libero, voluptatem veritatis quod, cumque, aliquam rerum neque deleniti veniam consequuntur tempora ad expedita! Quam repudiandae necessitatibus dolores optio amet natus eius animi corrupti? Explicabo aperiam, tempore, sunt maiores ab quod harum nam voluptatum necessitatibus voluptatibus placeat adipisci? Excepturi impedit animi dolore ipsum, eaque minus nisi esse ut vel quod alias modi commodi quisquam mollitia totam quae. Quisquam corrupti cupiditate dolor facilis. Suscipit sapiente quia blanditiis nemo deleniti ab cum. Obcaecati explicabo aliquam quidem! Officiis illo fuga asperiores in? Veniam, quas delectus.</p>
+            </div>
+            <div class="ingredients">
+              <h3>ingredients</h3>
+              <ul>
+                <li>ingredient name</li>
+                <li>ingredient name</li>
+                <li>ingredient name</li>
+                <li>ingredient name</li>
+              </ul>
+            </div>
+            <div class="receipe-controls">
+              <a href="#FIXME" title="Edit" id="edit">edit</a>
+              <a href="#FIXME" title="Delete" id="delete">delete</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="add-receipe">
+        <a href="home.html" title="Add New Receipe">add new receipe</a>
+      </div>
     </main>
     <!--main section end-->
 

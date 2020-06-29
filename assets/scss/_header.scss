@@ -1,0 +1,13 @@
+header {
+    background-image: linear-gradient(to left, $rightColor, $middleColor,  $leftColor);
+
+    .wrapper {
+        padding: 15px 0;
+        @include flex(nowrap, row, space-between, center, center);
+    }
+
+    a {
+        @include textcharacteristics($white, 15px, 800, uppercase);
+        @include vendor(text-shadow, 0px 10px 10px $shadow); 
+    }
+}

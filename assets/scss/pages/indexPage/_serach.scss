@@ -1,0 +1,150 @@
+.search-receipe {
+    background: linear-gradient(to right, transparentize($black , 0.5), transparentize($black , 0.5)), url('../images/chai.jpg') 50% 50% no-repeat;
+    background-size: cover;
+
+    .wrapper { width: 100%; }
+
+    form {
+        max-width: 1360px;
+        width: 85%; 
+        padding: 50px 7.5%;
+        background-color: $primaryColor;
+        text-align: center;
+    }
+
+    input {
+        display: block;
+        width: 60%;
+        padding: 15px 20px;
+        border-style: none;
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 10px;
+        margin: 0 auto;
+        @include boxsizing();
+        @include textcharacteristics($black, 11px, 300, uppercase);
+        background-color: transparentize($white, 0.5);
+        outline: none;
+    }
+
+    .form-group {
+        position: relative;
+
+        span {
+            display: block;
+            width: 60%;
+            padding: 7px;
+            margin: 10px auto;
+            border: 1px solid $red;
+            border-radius: 5px;
+            @include boxsizing();
+            @include textcharacteristics( transparentize($white , 0.3), 12px, 800, uppercase);
+            background-color: $red;
+            opacity: 0;
+            @include vendor(transition, 0.3s ease-in-out);
+        }
+
+        &.error {
+            span { opacity: 1; }
+        }
+
+        ul {
+            display: none;
+            width: 60%;
+            padding: 10px;
+            border-bottom-right-radius: 10px;
+            border-top-left-radius: 10px;
+            @include position(absolute, 1, 45px, auto, auto, 50%);
+            @include vendor(transform, translateX(-50%));
+            @include boxsizing();
+            background-color: $white;
+
+            &.activce { display: block; }
+        }
+
+        li {
+            display: block;
+            padding: 5px 15px;
+            border-bottom-right-radius: 5px;
+            border-top-left-radius: 5px;
+            margin-bottom: 3px;
+            @include boxsizing();
+            @include textcharacteristics( $secondaryColor, 12px, 300, uppercase);
+            text-align: left;
+            @include vendor(transition, 0.3s ease-in-out);
+            cursor: pointer;
+
+            &:hover {
+                background-color: $secondaryColor;
+                color: $white;
+            }
+        }
+    }
+    
+
+    button {
+        padding: 5px 80px;
+        border-style: none;
+        border-bottom-left-radius: 5px;
+        border-top-right-radius: 5px;
+        @include textcharacteristics($white, 20px, 400, capitalize);
+        font-family: 'edosz';
+        letter-spacing: 1px;
+        background-color: $secondaryColor;
+    }
+
+    .result {
+        max-width: 1360px;
+        width: 85%; 
+        padding: 50px 7.5%;
+        display: none;
+        position: relative;
+
+        &.active { display: block; }
+    }
+
+    h2 {
+        padding-bottom: 30px;
+        @include textcharacteristics($primaryColor, 20px, 700, uppercase);
+    }
+
+    h3 {
+        @include textcharacteristics($white, 20px, 700, uppercase);
+    }
+
+    p {
+        padding: 20px 5%;
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 10px;
+        margin: 20px 0;
+        @include textcharacteristics($secondaryColor, 13px, 500, normal);
+        text-align: justify;
+        @include boxsizing();
+        background-color: transparentize($white, 0.2);
+    }
+
+    .ingredients {
+        ul { margin-top: 20px; }
+        li {
+            padding: 5px 20px;
+            border-bottom-left-radius: 5px;
+            border-top-right-radius: 5px;
+            background-color: transparentize($white, 0.2);
+            @include textcharacteristics($secondaryColor, 13px, 500, normal);
+        }
+    }
+
+    .receipe-controls {
+        @include position(absolute, 1px, 50px, 7.5%, auto, auto);
+
+        a {
+            padding: 5px 15px;
+            border-bottom-left-radius: 5px;
+            border-top-right-radius: 5px;
+            margin-bottom: 5px;
+            display: block;
+            @include textcharacteristics($secondaryColor, 13px, 800, uppercase);
+            text-align: center;
+            background-color: $primaryColor;
+        }
+    }
+}

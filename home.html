@@ -1,0 +1,90 @@
+<!doctype html>
+
+<!-- If multi-language site, reconsider usage of html lang declaration here. -->
+<html lang="en"> 
+
+  <head>
+   
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>HOME | RECEIPE APP</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" media="screen" href="assets/css/style.css" >
+  
+  </head>
+
+<body>
+  <!--container start-->
+  <div class="container index-page">
+    <!--header section start-->
+    <header>
+      <div class="wrapper">
+        <h1>
+          <a href="index.html" title="Logo">
+            <img src="https://via.placeholder.com/200x40" alt="Logo">
+          </a>
+        </h1>
+
+        <ul>
+          <li>
+            <a href="index.html" title="Home">home</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <!--header section start-->
+    <!--main section start-->
+    <main>
+      <section class="add-receipe-form">
+        <div class="wrapper">
+            <form action="#FIXME">
+                <div class="form-group">
+                    <label>receipe name</label>
+                    <input type="text" id="receipe-name" placeholder="ENTER THE RECEIPE NAME">
+                    <span>please do not add number while searching the receipe</span>
+                </div>
+                
+                <div class="form-group">
+                    <label>steps for getting the receipe done</label>
+                    <textarea type="text" placeholder="ENTER THE RECEIPE STEPS HERE"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>ingredients</label>
+                    <form action="#FIXME">
+                        <input type="text" id="ingredient" placeholder="ENTER THE INGREDIENTS HERE">
+                        <button type="submit">add ingredient</button>
+                        <ul>
+                            <li>
+                                <input type="checkbox" name="ingredient">
+                                <span>ingredient name</span>
+                                <a href="#FIXME" id="delete-ingredient">delete</a>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+
+                <div class="form-controls">
+                    <button type="submit">add new receipe</button>
+                </div>
+            </form>
+        </div>
+      </section>
+    </main>
+    <!--main section end-->
+
+    <!--footer section start-->
+    <footer>
+    </footer>
+    <!--footer section end-->
+
+  </div>
+  <!--container end-->
+
+<!-- <script src="js/vendors/jquery-1.8.3.min.js"></script> -->
+<script src="assets/js/script.js"></script> 
+</body>
+</html>

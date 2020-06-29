@@ -1,0 +1,15 @@
+.add-receipe {
+    padding: 30px 0;
+    text-align: center;
+
+    a {
+        padding: 5px 80px;
+        border-style: none;
+        border-bottom-left-radius: 5px;
+        border-top-right-radius: 5px;
+        @include textcharacteristics($white, 20px, 400, capitalize);
+        font-family: 'edosz';
+        letter-spacing: 1px;
+        background-color: $secondaryColor;
+    }
+}

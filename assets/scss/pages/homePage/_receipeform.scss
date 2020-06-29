@@ -1,0 +1,122 @@
+.add-receipe-form {
+    padding: 70px 0;
+    background-color: $primaryColor;
+
+    form { 
+        width: 60%;
+        margin: 0 auto;
+    }
+    label {
+        padding-bottom: 10px;
+        display: block ;
+        @include textcharacteristics($secondaryColor, 15px, 800, uppercase);
+    }
+
+    input {
+        width: 100%;
+        display: block;
+        padding: 10px 20px;
+        border-style: none;
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 10px;
+        margin: 0 auto;
+        @include boxsizing();
+        @include textcharacteristics($black, 11px, 300, uppercase);
+        background-color: transparentize($white, 0.5);
+        outline: none;
+    }
+
+    textarea {
+        width: 100%;
+        height: 100px;
+        padding: 10px 20px;
+        border-style: none;
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 10px;
+        margin: 0 auto 30px;
+        display: block;
+        @include boxsizing();
+        @include textcharacteristics($black, 11px, 300, uppercase);
+        background-color: transparentize($white, 0.5);
+        outline: none;
+    }
+
+    .form-group {
+        span {
+            display: block;
+            padding: 7px;
+            margin: 10px auto;
+            border: 1px solid $red;
+            border-radius: 5px;
+            @include boxsizing();
+            @include textcharacteristics( transparentize($white , 0.3), 12px, 800, uppercase);
+            background-color: $red;
+            opacity: 0;
+            @include vendor(transition, 0.3s ease-in-out);
+        }
+
+        &.error { 
+            span { opacity: 1; }
+        }
+    }
+    
+
+    button {
+        padding: 5px 80px;
+        margin: 5px 0;
+        border-style: none;
+        border-bottom-left-radius: 5px;
+        border-top-right-radius: 5px;
+        @include textcharacteristics($white, 15px, 400, capitalize);
+        font-family: 'edosz';
+        letter-spacing: 1px;
+        background-color: $secondaryColor;
+    }
+
+    .form-group:nth-of-type(3) {
+        ul { 
+            display: none;
+
+            &.active { display: block; }
+        }
+
+        li {
+            margin-bottom: 5px;
+            background-color: $white;
+            @include flex(nowrap, row, flex-start, center, center);
+
+            input { 
+                width: 10%; 
+                margin: 0;
+            }
+        }
+
+        span {
+            display: inline;
+            margin: 0;
+            border-style: none;
+            @include textcharacteristics($secondaryColor, 13px, 400, uppercase);
+            background-color: transparent;
+            opacity: 1;
+        }
+
+        #delete-ingredient {
+            text-indent: -9999px;
+
+            &::before {
+                content: '\f1f8';
+				font-family: 'fontAwesome';
+				text-indent: 0;
+				float: left;
+				font-size: 17px;
+				color: $red;
+				@include vendor(transition, 0.3s ease-in-out);
+            }
+        }
+    }
+
+    .form-controls {
+        padding: 20px 0;
+        text-align: center;
+    }
+}
