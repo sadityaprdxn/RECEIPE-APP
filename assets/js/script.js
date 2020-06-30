@@ -12,7 +12,7 @@ window.onload = () => {
     const page = document.querySelector('.container');
     const regex = {
         receipeNameRegex: /^([a-zA-Z]){2,20}$/,
-        receipeRegex: /^([a-zA-Z0-9 ]){300,500}$/,
+        receipeRegex: /^(?:\b\w+\b[\s\r\n]*){50,1000}/
     };
 
     if (page.classList.contains('index-page')) {
@@ -32,6 +32,7 @@ window.onload = () => {
                         let receipeData = JSON.parse(window.localStorage[key]);
                         if (receipeData['name'].indexOf(receipeName.value.toLowerCase()) > -1) {
         
+                            debugger;
                             const liNode = display.createNode('li', receipeDropdown, receipeData['name']);
         
                             liNode.setAttribute('data-uniqueId', key);
@@ -41,9 +42,11 @@ window.onload = () => {
                                 display.showData(liNode);
                             });
                         }
+                        receipeDropdown.classList.add('active');
                     }
+
+                    if (receipeDropdown.children.length <= 0) { receipeDropdown.classList.remove('active'); }
                 }
-                receipeDropdown.classList.add('active');
             } else { receipeDropdown.classList.remove('active'); }
         });
 
@@ -114,6 +117,8 @@ window.onload = () => {
                 });
 
                 document.querySelector('.add-receipe-form form').reset();
+                alert('YOUR RECEIPE SUCCESSFULLY ADDED');
+                window.location.assign('index.html');
             }
         });
     }
