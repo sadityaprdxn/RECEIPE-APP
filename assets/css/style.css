@@ -145,6 +145,8 @@ li {
 
 header {
   background-image: linear-gradient(to left, #31AA6D, #2C786C, #004445);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/chai.jpg") 50% 50% no-repeat;
+  background-size: cover;
 }
 
 header .wrapper {
@@ -245,7 +247,7 @@ header a {
   background-color: #FFF;
 }
 
-.search-receipe .form-group ul.activce {
+.search-receipe .form-group ul.active {
   display: block;
 }
 
@@ -331,6 +333,7 @@ header a {
 
 .search-receipe .ingredients li {
   padding: 5px 20px;
+  margin-right: 3px;
   border-bottom-left-radius: 5px;
   border-top-right-radius: 5px;
   background-color: rgba(255, 255, 255, 0.8);
@@ -383,7 +386,7 @@ header a {
 }
 
 .add-receipe-form {
-  padding: 70px 0;
+  padding: 50px 0;
   background-color: #facc00;
 }
 

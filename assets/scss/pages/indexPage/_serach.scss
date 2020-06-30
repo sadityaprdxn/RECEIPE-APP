@@ -58,7 +58,7 @@
             @include boxsizing();
             background-color: $white;
 
-            &.activce { display: block; }
+            &.active { display: block; }
         }
 
         li {
@@ -126,6 +126,7 @@
         ul { margin-top: 20px; }
         li {
             padding: 5px 20px;
+            margin-right: 3px;
             border-bottom-left-radius: 5px;
             border-top-right-radius: 5px;
             background-color: transparentize($white, 0.2);

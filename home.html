@@ -18,7 +18,7 @@
 
 <body>
   <!--container start-->
-  <div class="container index-page">
+  <div class="container home-page">
     <!--header section start-->
     <header>
       <div class="wrapper">
@@ -43,28 +43,21 @@
             <form action="#FIXME">
                 <div class="form-group">
                     <label>receipe name</label>
-                    <input type="text" id="receipe-name" placeholder="ENTER THE RECEIPE NAME">
-                    <span>please do not add number while searching the receipe</span>
+                    <input type="text" id="receipe-name" data-regex="receipeNameRegex" placeholder="ENTER THE RECEIPE NAME">
+                    <span>please do not add number while adding the receipe name</span>
                 </div>
                 
                 <div class="form-group">
                     <label>steps for getting the receipe done</label>
-                    <textarea type="text" placeholder="ENTER THE RECEIPE STEPS HERE"></textarea>
+                    <textarea type="text" data-regex="receipeRegex"  placeholder="ENTER THE RECEIPE STEPS HERE"></textarea>
+                    <span>the receipe shoul contain more than 50 letters</span>
                 </div>
                 
                 <div class="form-group">
                     <label>ingredients</label>
-                    <form action="#FIXME">
                         <input type="text" id="ingredient" placeholder="ENTER THE INGREDIENTS HERE">
                         <button type="submit">add ingredient</button>
-                        <ul>
-                            <li>
-                                <input type="checkbox" name="ingredient">
-                                <span>ingredient name</span>
-                                <a href="#FIXME" id="delete-ingredient">delete</a>
-                            </li>
-                        </ul>
-                    </form>
+                        <ul></ul>
                 </div>
 
                 <div class="form-controls">
@@ -85,6 +78,6 @@
   <!--container end-->
 
 <!-- <script src="js/vendors/jquery-1.8.3.min.js"></script> -->
-<script src="assets/js/script.js"></script> 
+<script src="assets/js/script.js" type="module"></script> 
 </body>
 </html>

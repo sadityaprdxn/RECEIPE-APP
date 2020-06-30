@@ -1,5 +1,7 @@
 header {
     background-image: linear-gradient(to left, $rightColor, $middleColor,  $leftColor);
+    background: linear-gradient(to right, transparentize($black , 0.7), transparentize($black , 0.7)), url('../images/chai.jpg') 50% 50% no-repeat;
+    background-size: cover;
 
     .wrapper {
         padding: 15px 0;
