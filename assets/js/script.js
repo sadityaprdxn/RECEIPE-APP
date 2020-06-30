@@ -30,7 +30,7 @@ window.onload = () => {
                 for (let key in window.localStorage) {
                     if (key.includes('receipe')) {
                         let receipeData = JSON.parse(window.localStorage[key]);
-                        if (receipeData['name'].indexOf(receipeName.value) > -1) {
+                        if (receipeData['name'].indexOf(receipeName.value.toLowerCase()) > -1) {
         
                             const liNode = display.createNode('li', receipeDropdown, receipeData['name']);
         
@@ -94,7 +94,7 @@ window.onload = () => {
 
             if (allFieldsRight) {
 
-                const newReceipeName = receipeName.value;
+                const newReceipeName = receipeName.value.toLowerCase();
                 const procedure = receipe.value;
                 const igredientsArray = document.querySelectorAll('.form-group ul li input');
 
